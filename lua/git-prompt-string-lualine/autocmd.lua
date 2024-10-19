@@ -59,7 +59,7 @@ M.setup = function()
     FocusLost = { pattern = '*' },
     SessionLoadPost = { pattern = '*' },
     VimEnter = { pattern = '*' },
-    User = { pattern = { 'FugitiveChanged', 'VeryLazy' } },
+    User = { pattern = { 'FugitiveChanged', 'VeryLazy', 'NeogitCommitComplete', 'NeogitPushComplete', 'NeogitPullComplete' } },
   }
 
   for event, opts in pairs(refresh_events) do
