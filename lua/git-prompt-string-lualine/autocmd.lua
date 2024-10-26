@@ -59,7 +59,40 @@ M.setup = function()
     FocusLost = { pattern = '*' },
     SessionLoadPost = { pattern = '*' },
     VimEnter = { pattern = '*' },
-    User = { pattern = { 'FugitiveChanged', 'VeryLazy', 'NeogitCommitComplete', 'NeogitPushComplete', 'NeogitPullComplete' } },
+    User = {
+      pattern = {
+        -- vim-fugitive https://github.com/tpope/vim-fugitive
+        'FugitiveBlob',
+        'FugitiveChanged',
+        'FugitiveCommit',
+        'FugitiveEditor',
+        'FugitiveIndex',
+        'FugitiveObject',
+        'FugitivePager',
+        'FugitiveStageBlob',
+        'FugitiveTag',
+        'FugitiveTree',
+        -- neogit https://github.com/NeogitOrg/neogit
+        'NeogitBranchCheckout',
+        'NeogitBranchCreate',
+        'NeogitBranchDelete',
+        'NeogitBranchRename',
+        'NeogitBranchReset',
+        'NeogitCherryPick',
+        'NeogitCommitComplete',
+        'NeogitFetchComplete',
+        'NeogitMerge',
+        'NeogitPullComplete',
+        'NeogitPushComplete',
+        'NeogitRebase',
+        'NeogitReset',
+        'NeogitStatusRefreshed',
+        'NeogitTagCreate',
+        'NeogitTagDelete',
+        -- lazy.nvim https://github.com/folke/lazy.nvim
+        'VeryLazy',
+      },
+    },
   }
 
   for event, opts in pairs(refresh_events) do
